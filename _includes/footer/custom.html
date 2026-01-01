@@ -1,7 +1,5 @@
 <!-- start custom footer snippets -->
 
-<a href="/sitemap/">Sitemap</a>
-
 <!-- Support for MatJax -->
 <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
@@ -14,6 +12,27 @@
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({startOnLoad:true, theme:'default'});
     await mermaid.run({querySelector:'code.language-mermaid'});
+</script>
+
+<!-- Force links to open in a new tab except top navigation -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('#')) return;
+      if (href.startsWith('mailto:') || href.startsWith('tel:')) return;
+      if (href.startsWith('javascript:')) return;
+      if (a.closest('.masthead')) return; // keep top tabs same-page
+
+      a.setAttribute('target', '_blank');
+      const existingRel = a.getAttribute('rel') || '';
+      const relParts = new Set(existingRel.split(/\s+/).filter(Boolean));
+      relParts.add('noopener');
+      relParts.add('noreferrer');
+      a.setAttribute('rel', Array.from(relParts).join(' '));
+    });
+  });
 </script>
 
 <!-- end custom footer snippets -->

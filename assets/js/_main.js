@@ -28,7 +28,7 @@ let setTheme = (theme) => {
     theme ||
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
-    browserPref;
+    "light"; // default to light when nothing is set
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -91,6 +91,9 @@ $(document).ready(function () {
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
   // If the user hasn't chosen a theme, follow the OS preference
+  if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "light"); // default preference
+  }
   setTheme();
   window.matchMedia('(prefers-color-scheme: dark)')
         .addEventListener("change", (e) => {
