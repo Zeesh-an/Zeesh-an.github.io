@@ -10,6 +10,8 @@
 main:
   - title: "Publications"
     url: /publications/
+  - title: "CV"
+    url: /resume_temp.pdf
 
   # - title: "Talks"
   #   url: /talks/    
