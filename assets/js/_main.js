@@ -28,7 +28,7 @@ let setTheme = (theme) => {
     theme ||
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
-    "light"; // default to light when nothing is set
+    browserPref; // default to browser preference
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -90,9 +90,9 @@ $(document).ready(function () {
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // If the user hasn't chosen a theme, follow the OS preference
+  // If the user hasn't chosen a theme, follow the OS/browser preference
   if (!localStorage.getItem("theme")) {
-    localStorage.setItem("theme", "light"); // default preference
+    localStorage.setItem("theme", browserPref); // follow browser preference
   }
   setTheme();
   window.matchMedia('(prefers-color-scheme: dark)')
