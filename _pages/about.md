@@ -14,6 +14,10 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 <div class="news-scroll">
   <div class="news-item">
     <span class="news-date">Apr 2026</span>
+    <span class="news-text">DIPT (Deep Identification of Propagation Trees) accepted at IJCAI 2026!</span>
+  </div>
+  <div class="news-item">
+    <span class="news-date">Apr 2026</span>
     <span class="news-text">Excited to be joining Microsoft as a Research Intern this May — reach out if you'll be in Seattle!</span>
   </div>
   <div class="news-item">
