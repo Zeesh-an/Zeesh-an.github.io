@@ -101,6 +101,7 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 **Conference Reviewer/Program Committee**
 - PC Member, IEEE International Conference on Data Science and Advanced Analytics 2025
 - PC Member, LLMs4Science @ AAAI 2025
+- Reviewer, NeurIPS 2026
 - Reviewer, KDD 2026
 
 
