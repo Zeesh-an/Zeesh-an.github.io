@@ -58,28 +58,48 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 
 <div class="exp-cards">
 
-  <div class="exp-card">
-    <div class="exp-card-header">
-      <span class="exp-role">Visiting Student</span>
-      <span class="exp-date">Oct 2025 – May 2026</span>
+  <div class="exp-card exp-card-with-logo">
+    <img class="exp-logo" src="{{ base_path }}/images/logos/microsoft.png" alt="Microsoft" />
+    <div class="exp-card-body">
+      <div class="exp-card-header">
+        <span class="exp-role">Research Intern</span>
+        <span class="exp-date">May 2026 – Aug 2026</span>
+      </div>
+      <div class="exp-org">Microsoft Research, Redmond, WA, USA</div>
     </div>
-    <div class="exp-org">Argonne National Laboratory</div>
   </div>
 
-  <div class="exp-card">
-    <div class="exp-card-header">
-      <span class="exp-role">ML Research Intern</span>
-      <span class="exp-date">Jun – Aug 2023</span>
+  <div class="exp-card exp-card-with-logo">
+    <img class="exp-logo" src="{{ base_path }}/images/logos/argonne.png" alt="Argonne" />
+    <div class="exp-card-body">
+      <div class="exp-card-header">
+        <span class="exp-role">Visiting Student</span>
+        <span class="exp-date">Oct 2025 – May 2026</span>
+      </div>
+      <div class="exp-org">Argonne National Laboratory</div>
     </div>
-    <div class="exp-org">CERN</div>
   </div>
 
-  <div class="exp-card">
-    <div class="exp-card-header">
-      <span class="exp-role">ML Research Intern</span>
-      <span class="exp-date">Jun – Sep 2022</span>
+  <div class="exp-card exp-card-with-logo">
+    <img class="exp-logo" src="{{ base_path }}/images/logos/cern.png" alt="CERN" />
+    <div class="exp-card-body">
+      <div class="exp-card-header">
+        <span class="exp-role">ML Research Intern</span>
+        <span class="exp-date">Jun – Aug 2023</span>
+      </div>
+      <div class="exp-org">CERN</div>
     </div>
-    <div class="exp-org">RheinMain University of Applied Sciences</div>
+  </div>
+
+  <div class="exp-card exp-card-with-logo">
+    <img class="exp-logo" src="{{ base_path }}/images/logos/rheinmain.png" alt="RheinMain" />
+    <div class="exp-card-body">
+      <div class="exp-card-header">
+        <span class="exp-role">ML Research Intern</span>
+        <span class="exp-date">Jun – Sep 2022</span>
+      </div>
+      <div class="exp-org">RheinMain University of Applied Sciences</div>
+    </div>
   </div>
 
 </div>
@@ -141,6 +161,22 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 }
 .news-text { color: var(--global-text-color); }
 .exp-cards { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.exp-card-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.exp-logo {
+  width: 72px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #fff;
+  padding: 4px;
+  border: 1px solid var(--global-border-color);
+}
+.exp-card-body { flex: 1; min-width: 0; }
 .exp-card {
   border: 1px solid var(--global-border-color);
   border-top: 3px solid var(--global-dark-border-color);
@@ -184,6 +220,14 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
   color: var(--global-text-color-light);
   line-height: 1.5;
 }
+.exp-bullets {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  font-size: 0.85em;
+  color: var(--global-text-color);
+  line-height: 1.55;
+}
+.exp-bullets li { margin-bottom: 3px; }
 .self-author { font-weight: 700; text-decoration: underline; color: var(--global-text-color); }
 .paper-tag {
   display: inline-block;
