@@ -1,0 +1,4 @@
+# Local development overrides (loaded on top of _config.yml).
+# Makes asset URLs point at localhost instead of 0.0.0.0 so the browser can load CSS/JS.
+url: "http://localhost:4000"
+baseurl: ""

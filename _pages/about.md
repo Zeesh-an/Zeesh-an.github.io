@@ -120,6 +120,17 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 {% endfor %}
 </div>
 
+## Achievements
+
+- Student Travel Award, KDD 2026
+- Awarded Rector's Gold Medal for best final-year undergraduate research project
+- Awarded Presidential Gold Medal for securing rank one in batch in Bachelors of Software Engineering
+- Selected as prestigious Openlab Researcher at CERN from pool of 2000 candidates (1.5% acceptance rate)
+- Awarded prestigious MBZUAI undergraduate fully funded research internship
+- Awarded DAAD fully funded research internship
+- Got NUST Merit Based Scholarship for 8 consecutive semesters
+
+
 ## Services
 
 **Conference Reviewer/Program Committee**
