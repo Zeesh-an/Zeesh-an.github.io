@@ -15,7 +15,7 @@ main:
   - title: "Services"
     url: /#services
   - title: "CV"
-    url: /resume_temp.pdf
+    url: https://drive.google.com/file/d/1994CnrdIggGDh2b56APnrHcp7_2wRMZU/view
 
   # - title: "Talks"
   #   url: /talks/    

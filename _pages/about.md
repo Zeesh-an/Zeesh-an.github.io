@@ -144,7 +144,16 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 - Reviewer, IEEE Transactions on Big Data
 - Reviewer, IEEE Transactions on Computational Social Systems
 
+<p class="last-updated">Last updated: {{ site.time | date: "%B %Y" }}</p>
+
 <style>
+.last-updated {
+  margin-top: 28px;
+  text-align: right;
+  font-size: 0.78em;
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
 .news-scroll {
   max-height: 180px;
   overflow-y: auto;
