@@ -1,6 +1,7 @@
 ---
 title: "Deep Identification of Propagation Trees"
 collection: publications
+featured: true
 category: conferences
 date: 2025-03-10
 venue: "IJCAI 2026"

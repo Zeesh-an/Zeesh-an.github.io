@@ -7,11 +7,19 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I am a second-year Ph.D. student in the Department of Computer Science at Emory University, advised by [Dr. Liang Zhao](https://cs.emory.edu/~lzhao41/). My research focuses on graph machine learning and foundation models for complex networks. I obtained my B.E. in Software Engineering from the National University of Sciences and Technology (NUST), Pakistan, in 2024, where I worked under [Dr. Faisal Shafait](https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en).
+Hi there! I am a second-year Ph.D. student in the Department of Computer Science at Emory University, advised by [Dr. Liang Zhao](https://cs.emory.edu/~lzhao41/). My research interests span foundation models for complex networks, optimization, and multi-agent communication. I obtained my B.E. in Software Engineering from the National University of Sciences and Technology (NUST), Pakistan, in 2024, where I worked under [Dr. Faisal Shafait](https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en).
 
 ## News
 
 <div class="news-scroll">
+  <div class="news-item">
+    <span class="news-date">Aug 2026</span>
+    <span class="news-text">EpiWorld: Grounding LLM Policy Agents in Epidemiological World Models accepted to EMNLP 2026 Findings!</span>
+  </div>
+  <div class="news-item">
+    <span class="news-date">Jun 2026</span>
+    <span class="news-text">Received the KDD 2026 Student Travel Award.</span>
+  </div>
   <div class="news-item">
     <span class="news-date">May 2026</span>
     <span class="news-text">Towards Systematic Generalization for Power Grid Optimization Problems accepted at KDD 2026!</span>
@@ -104,11 +112,11 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 
 </div>
 
-## Publications
+## Selected Publications
 
 {% include base_path %}
 <div class="exp-cards">
-{% for post in site.publications reversed %}
+{% for post in site.publications reversed %}{% if post.featured %}
   <div class="exp-card">
     <div class="exp-card-header">
       <span class="exp-role">{{ post.title }}</span>
@@ -117,7 +125,47 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
     <div class="exp-org">{% if post.venue %}{{ post.venue }}{% else %}{{ post.category | capitalize }}{% endif %}{% if post.paperurl %} <a class="paper-tag" href="{{ post.paperurl }}">Paper</a>{% endif %}</div>
     {% if post.authors %}<div class="exp-authors">{{ post.authors | replace: "Zeeshan Memon", "<span class='self-author'>Zeeshan Memon</span>" }}</div>{% endif %}
   </div>
-{% endfor %}
+{% endif %}{% endfor %}
+</div>
+
+<p class="view-all"><a href="{{ base_path }}/publications/">View all publications &rarr;</a></p>
+
+## Teaching
+
+<div class="exp-cards">
+
+  <div class="exp-card">
+    <div class="exp-card-header">
+      <span class="exp-role">CS 584: Spatial Computing</span>
+      <span class="exp-date">Teaching Assistant</span>
+    </div>
+    <div class="exp-org">Emory University</div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card-header">
+      <span class="exp-role">CS 584: Deep Learning on Graphs</span>
+      <span class="exp-date">Teaching Assistant</span>
+    </div>
+    <div class="exp-org">Emory University</div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card-header">
+      <span class="exp-role">CS 110: Computer Science Fundamentals</span>
+      <span class="exp-date">Teaching Assistant</span>
+    </div>
+    <div class="exp-org">Emory University</div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card-header">
+      <span class="exp-role">CS 250: Data Structures and Algorithms</span>
+      <span class="exp-date">Teaching Assistant</span>
+    </div>
+    <div class="exp-org">SEECS, National University of Sciences and Technology</div>
+  </div>
+
 </div>
 
 ## Achievements
@@ -261,4 +309,15 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
   transition: background 0.15s, color 0.15s;
 }
 .paper-tag:hover { background: var(--global-link-color); color: #fff !important; }
+.view-all {
+  margin-top: 12px;
+  font-size: 0.85em;
+  text-align: right;
+}
+.view-all a {
+  color: var(--global-link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+.view-all a:hover { text-decoration: underline; }
 </style>

@@ -1,6 +1,7 @@
 ---
 title: "On the Fundamental Limits of LLMs at Scale"
 collection: publications
+featured: true
 category: conferences
 date: 2025-11-10
 venue: "Transactions on Machine Learning Research (TMLR)"
@@ -9,4 +10,3 @@ authors: "Muhammad Ahmed Mohsin, Muhammad Umer, Ahsan Bilal, Zeeshan Memon, Muha
 excerpt: "Accepted in Transactions on Machine Learning Research (TMLR)."
 citation: "Mohsin, M.A., Umer, M., Bilal, A., Memon, Z., Qadir, M.I., et al. (2025). On the Fundamental Limits of LLMs at Scale. Transactions on Machine Learning Research (TMLR)."
 ---
-
