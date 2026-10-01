@@ -4,6 +4,7 @@ collection: publications
 category: conferences
 date: 2024-07-01
 venue: "ICML 2024 Workshop on LLMs and Cognition"
+badge: "ICML 2024 Workshop"
 paperurl: "https://openreview.net/forum?id=d0jQuZe6k0"
 authors: "Zeeshan Memon, Muhammad Arham, Adnan Ul-Hasan, Faisal Shafait"
 excerpt: "Workshop paper on discrete prompt optimization informed by LLMs."

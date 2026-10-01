@@ -4,6 +4,8 @@ collection: publications
 category: conferences
 date: 2025-05-20
 venue: "Preprint"
+badge: "Preprint"
+thumbnail: "pubs/causal.png"
 paperurl: "https://arxiv.org/abs/2405.16219v2"
 authors: "Qilong Zhao, Shiyu Wang, Zeeshan Memon, Yang Qiao, Guangji Bai, Bo Pan, Zhaohui Qin, Liang Zhao"
 excerpt: "Preprint on causal generative modeling with controllable properties."

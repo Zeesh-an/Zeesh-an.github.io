@@ -5,6 +5,8 @@ featured: true
 category: conferences
 date: 2025-03-10
 venue: "IJCAI 2026"
+badge: "IJCAI 2026"
+thumbnail: "pubs/dipt.png"
 paperurl: "https://arxiv.org/abs/2503.00646"
 authors: "Zeeshan Memon, Chen Ling, Ruochen Kong, Vishwanath Seshagiri, Andreas Zufle, Liang Zhao"
 excerpt: "Identifying propagation trees with deep models."

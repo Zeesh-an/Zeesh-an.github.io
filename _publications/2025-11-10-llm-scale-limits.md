@@ -5,6 +5,8 @@ featured: true
 category: conferences
 date: 2025-11-10
 venue: "Transactions on Machine Learning Research (TMLR)"
+badge: "TMLR 2025"
+thumbnail: "pubs/llm-limits.png"
 paperurl: "https://arxiv.org/abs/2511.12869"
 authors: "Muhammad Ahmed Mohsin, Muhammad Umer, Ahsan Bilal, Zeeshan Memon, Muhammad Ibtsaam Qadir, ..."
 excerpt: "Accepted in Transactions on Machine Learning Research (TMLR)."

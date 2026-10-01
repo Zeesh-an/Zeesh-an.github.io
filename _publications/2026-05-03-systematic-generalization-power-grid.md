@@ -5,6 +5,8 @@ featured: true
 category: conferences
 date: 2026-05-03
 venue: "KDD 2026 (Oral)"
+badge: "KDD 2026 Oral"
+thumbnail: "pubs/power-grid.png"
 paperurl: "https://arxiv.org/abs/2605.02026"
 authors: "Zeeshan Memon, Yijiang Li, Hongwei Jin, Kibaek Kim, Liang Zhao"
 excerpt: "Systematic generalization for power grid optimization problems."

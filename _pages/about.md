@@ -13,6 +13,10 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 
 <div class="news-scroll">
   <div class="news-item">
+    <span class="news-date">Sep 2026</span>
+    <span class="news-text">CONSTRAINER accepted to NeurIPS 2026!</span>
+  </div>
+  <div class="news-item">
     <span class="news-date">Aug 2026</span>
     <span class="news-text">EpiWorld: Grounding LLM Policy Agents in Epidemiological World Models accepted to EMNLP 2026 Findings!</span>
   </div>
@@ -22,11 +26,11 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
   </div>
   <div class="news-item">
     <span class="news-date">May 2026</span>
-    <span class="news-text">Towards Systematic Generalization for Power Grid Optimization Problems accepted at KDD 2026!</span>
+    <span class="news-text"><a href="https://arxiv.org/abs/2605.02026">Towards Systematic Generalization for Power Grid Optimization Problems</a> accepted at KDD 2026!</span>
   </div>
   <div class="news-item">
     <span class="news-date">Apr 2026</span>
-    <span class="news-text">DIPT (Deep Identification of Propagation Trees) accepted at IJCAI 2026!</span>
+    <span class="news-text"><a href="https://arxiv.org/abs/2503.00646">DIPT (Deep Identification of Propagation Trees)</a> accepted at IJCAI 2026!</span>
   </div>
   <div class="news-item">
     <span class="news-date">Apr 2026</span>
@@ -34,7 +38,7 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
   </div>
   <div class="news-item">
     <span class="news-date">Mar 2026</span>
-    <span class="news-text">Two works on Epidemiology World Model and Foundation Model for Power Grid Optimization accepted to ICLR workshops!</span>
+    <span class="news-text">Two works on <a href="https://openreview.net/forum?id=T5ACq6FQqh">Epidemiology World Model</a> and <a href="https://arxiv.org/abs/2603.04300">Foundation Model for Power Grid Optimization</a> accepted to ICLR workshops!</span>
   </div>
   <div class="news-item">
     <span class="news-date">Aug 2024</span>
@@ -42,7 +46,7 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
   </div>
   <div class="news-item">
     <span class="news-date">Jun 2024</span>
-    <span class="news-text">Paper accepted at the ICML 2024 Workshop on LLMs and Cognition.</span>
+    <span class="news-text"><a href="https://openreview.net/forum?id=d0jQuZe6k0">LLM-Informed Discrete Prompt Optimization</a> accepted at the ICML 2024 Workshop on LLMs and Cognition.</span>
   </div>
   <div class="news-item">
     <span class="news-date">May 2024</span>
@@ -50,7 +54,7 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
   </div>
   <div class="news-item">
     <span class="news-date">Mar 2023</span>
-    <span class="news-text">First paper accepted at ICDAR 2023 (International Conference on Document Analysis and Recognition).</span>
+    <span class="news-text">First paper, <a href="https://link.springer.com/chapter/10.1007/978-3-031-41685-9_27">Content-aware Urdu handwriting generation</a>, accepted at ICDAR 2023 (International Conference on Document Analysis and Recognition).</span>
   </div>
   <div class="news-item">
     <span class="news-date">Mar 2023</span>

@@ -5,6 +5,8 @@ featured: true
 category: conferences
 date: 2026-03-04
 venue: "ICLR Workshop on Foundation Models for Science"
+badge: "ICLR 2026 Workshop"
+thumbnail: "pubs/lumina.png"
 paperurl: "https://arxiv.org/abs/2603.04300"
 authors: "Yijiang Li, Zeeshan Memon, Hongwei Jin, Stefano Fenu, Keunju Song, Sunash B Sharma, Parfait Gasana, Hongseok Kim, Liang Zhao, Kibaek Kim"
 excerpt: "Foundation model for topology-transferable AC optimal power flow."
