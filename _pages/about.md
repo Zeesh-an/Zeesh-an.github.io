@@ -7,7 +7,12 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I am a second-year Ph.D. student in the Department of Computer Science at Emory University, advised by [Dr. Liang Zhao](https://cs.emory.edu/~lzhao41/). My research interests span foundation models for complex networks, optimization, and multi-agent communication. I obtained my B.E. in Software Engineering from the National University of Sciences and Technology (NUST), Pakistan, in 2024, where I worked under [Dr. Faisal Shafait](https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en).
+Hi there! I am a third-year Ph.D. student in the Department of Computer Science at Emory University, advised by [Dr. Liang Zhao](https://cs.emory.edu/~lzhao41/). My research interests span foundation models, machine learning for optimization and decision-making, and graph learning for complex systems. I obtained my B.E. in Software Engineering from the National University of Sciences and Technology (NUST), Pakistan, in 2024, where I worked under [Dr. Faisal Shafait](https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en).
+
+<div class="open-to">
+  <div class="open-to-label">Open to opportunities</div>
+  I am open to <strong>research and applied scientist internships</strong>, as well as <strong>research collaborations</strong>. If my work aligns with yours, I would be glad to collaborate or discuss ideas. Feel free to reach out by <a href="mailto:{{ site.author.email }}">email</a>.
+</div>
 
 ## News
 
@@ -15,6 +20,10 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
   <div class="news-item">
     <span class="news-date">Sep 2026</span>
     <span class="news-text">CONSTRAINER accepted to NeurIPS 2026!</span>
+  </div>
+  <div class="news-item">
+    <span class="news-date">Sep 2026</span>
+    <span class="news-text">Passed my Ph.D. Qualifying Exam!</span>
   </div>
   <div class="news-item">
     <span class="news-date">Aug 2026</span>
@@ -199,6 +208,27 @@ Hi there! I am a second-year Ph.D. student in the Department of Computer Science
 <p class="last-updated">Last updated: {{ site.time | date: "%B %Y" }}</p>
 
 <style>
+.open-to {
+  margin: 16px 0 8px;
+  padding: 12px 16px;
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid var(--global-link-color);
+  border-radius: 6px;
+  background: rgba(127,127,127,0.06);
+  background: color-mix(in srgb, var(--global-link-color) 8%, var(--global-bg-color));
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  font-size: 0.92em;
+  line-height: 1.6;
+}
+.open-to-label {
+  margin-bottom: 4px;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--global-link-color);
+}
+.open-to a { font-weight: 600; }
 .last-updated {
   margin-top: 28px;
   text-align: right;
