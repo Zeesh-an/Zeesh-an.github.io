@@ -27,7 +27,7 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
   </div>
   <div class="news-item">
     <span class="news-date">Aug 2026</span>
-    <span class="news-text">EpiWorld: Grounding LLM Policy Agents in Epidemiological World Models accepted to EMNLP 2026 Findings!</span>
+    <span class="news-text"><a href="https://arxiv.org/abs/2610.02744">EpiWorld: Grounding LLM Policy Agents in Epidemiological World Models</a> accepted to EMNLP 2026 Findings!</span>
   </div>
   <div class="news-item">
     <span class="news-date">Jun 2026</span>
