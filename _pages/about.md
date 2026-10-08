@@ -77,50 +77,51 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
 
 ## Experience
 
-<div class="exp-cards">
+<div class="work-list">
 
-  <div class="exp-card exp-card-with-logo">
-    <img class="exp-logo" src="{{ base_path }}/images/logos/microsoft.png" alt="Microsoft" />
-    <div class="exp-card-body">
-      <div class="exp-card-header">
-        <span class="exp-role">Research Intern</span>
-        <span class="exp-date">May 2026 – Aug 2026</span>
-      </div>
-      <div class="exp-org">Microsoft Research, Redmond, WA, USA</div>
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/microsoft.png" alt="Microsoft" />
+    <div class="work-main">
+      <div class="work-org">Microsoft Research</div>
+      <div class="work-role">Research Intern · Redmond, WA, USA</div>
     </div>
+    <div class="work-date">May 2026 – Aug 2026</div>
   </div>
 
-  <div class="exp-card exp-card-with-logo">
-    <img class="exp-logo" src="{{ base_path }}/images/logos/argonne.png" alt="Argonne" />
-    <div class="exp-card-body">
-      <div class="exp-card-header">
-        <span class="exp-role">Visiting Student</span>
-        <span class="exp-date">Oct 2025 – May 2026</span>
-      </div>
-      <div class="exp-org">Argonne National Laboratory</div>
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/argonne.png" alt="Argonne" />
+    <div class="work-main">
+      <div class="work-org">Argonne National Laboratory</div>
+      <div class="work-role">Visiting Student</div>
     </div>
+    <div class="work-date">Oct 2025 – May 2026</div>
   </div>
 
-  <div class="exp-card exp-card-with-logo">
-    <img class="exp-logo" src="{{ base_path }}/images/logos/cern.png" alt="CERN" />
-    <div class="exp-card-body">
-      <div class="exp-card-header">
-        <span class="exp-role">ML Research Intern</span>
-        <span class="exp-date">Jun – Aug 2023</span>
-      </div>
-      <div class="exp-org">CERN</div>
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/emory.png" alt="Emory University" />
+    <div class="work-main">
+      <div class="work-org">MICS Lab, Emory University</div>
+      <div class="work-role">Graduate Research Assistant</div>
     </div>
+    <div class="work-date">Aug 2024 – Present</div>
   </div>
 
-  <div class="exp-card exp-card-with-logo">
-    <img class="exp-logo" src="{{ base_path }}/images/logos/rheinmain.png" alt="RheinMain" />
-    <div class="exp-card-body">
-      <div class="exp-card-header">
-        <span class="exp-role">ML Research Intern</span>
-        <span class="exp-date">Jun – Sep 2022</span>
-      </div>
-      <div class="exp-org">RheinMain University of Applied Sciences</div>
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/cern.png" alt="CERN" />
+    <div class="work-main">
+      <div class="work-org">CERN</div>
+      <div class="work-role">ML Research Intern</div>
     </div>
+    <div class="work-date">Jun – Aug 2023</div>
+  </div>
+
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/rheinmain.png" alt="RheinMain" />
+    <div class="work-main">
+      <div class="work-org">RheinMain University of Applied Sciences</div>
+      <div class="work-role">ML Research Intern</div>
+    </div>
+    <div class="work-date">Jun – Sep 2022</div>
   </div>
 
 </div>
@@ -128,15 +129,14 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
 ## Selected Publications
 
 {% include base_path %}
-<div class="exp-cards">
+<div class="row-list">
 {% for post in site.publications reversed %}{% if post.featured %}
-  <div class="exp-card">
-    <div class="exp-card-header">
-      <span class="exp-role">{{ post.title }}</span>
-      <span class="exp-date">{{ post.date | date: '%Y' }}</span>
+  <div class="row-item">
+    <div class="row-label">{{ post.badge | default: post.venue }}</div>
+    <div class="row-main">
+      <div class="row-title">{% if post.paperurl %}<a href="{{ post.paperurl }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</div>
+      {% if post.authors %}<div class="row-sub">{{ post.authors | replace: "Zeeshan Memon", "<strong>Zeeshan Memon</strong>" }}</div>{% endif %}
     </div>
-    <div class="exp-org">{% if post.venue %}{{ post.venue }}{% else %}{{ post.category | capitalize }}{% endif %}{% if post.paperurl %} <a class="paper-tag" href="{{ post.paperurl }}">Paper</a>{% endif %}</div>
-    {% if post.authors %}<div class="exp-authors">{{ post.authors | replace: "Zeeshan Memon", "<span class='self-author'>Zeeshan Memon</span>" }}</div>{% endif %}
   </div>
 {% endif %}{% endfor %}
 </div>
@@ -145,41 +145,10 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
 
 ## Teaching
 
-<div class="exp-cards">
-
-  <div class="exp-card">
-    <div class="exp-card-header">
-      <span class="exp-role">CS 584: Spatial Computing</span>
-      <span class="exp-date">Teaching Assistant</span>
-    </div>
-    <div class="exp-org">Emory University</div>
-  </div>
-
-  <div class="exp-card">
-    <div class="exp-card-header">
-      <span class="exp-role">CS 584: Deep Learning on Graphs</span>
-      <span class="exp-date">Teaching Assistant</span>
-    </div>
-    <div class="exp-org">Emory University</div>
-  </div>
-
-  <div class="exp-card">
-    <div class="exp-card-header">
-      <span class="exp-role">CS 110: Computer Science Fundamentals</span>
-      <span class="exp-date">Teaching Assistant</span>
-    </div>
-    <div class="exp-org">Emory University</div>
-  </div>
-
-  <div class="exp-card">
-    <div class="exp-card-header">
-      <span class="exp-role">CS 250: Data Structures and Algorithms</span>
-      <span class="exp-date">Teaching Assistant</span>
-    </div>
-    <div class="exp-org">SEECS, National University of Sciences and Technology</div>
-  </div>
-
-</div>
+- Teaching Assistant, CS 584: Spatial Computing, Emory University
+- Teaching Assistant, CS 584: Deep Learning on Graphs, Emory University
+- Teaching Assistant, CS 110: Computer Science Fundamentals, Emory University
+- Teaching Assistant, CS 250: Data Structures and Algorithms, SEECS, National University of Sciences and Technology
 
 ## Achievements
 
@@ -262,87 +231,65 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
   white-space: nowrap;
 }
 .news-text { color: var(--global-text-color); }
-.exp-cards { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-.exp-card-with-logo {
+.work-list { margin-top: 6px; }
+.work-row {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--global-border-color);
 }
-.exp-logo {
-  width: 72px;
-  height: 48px;
+.work-row:last-child { border-bottom: none; }
+.work-logo {
+  width: 84px;
+  height: 56px;
   object-fit: contain;
   flex-shrink: 0;
-  border-radius: 6px;
   background: #fff;
-  padding: 4px;
-  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+  padding: 3px;
 }
-.exp-card-body { flex: 1; min-width: 0; }
-.exp-card {
-  border: 1px solid var(--global-border-color);
-  border-top: 3px solid var(--global-dark-border-color);
-  border-radius: 6px;
-  padding: 12px 16px;
-  background: var(--global-bg-color);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-.exp-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transform: translateY(-1px);
-}
-.exp-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-.exp-role { font-weight: 600; font-size: 0.95em; line-height: 1.4; }
-.exp-date {
-  font-size: 0.78em;
-  color: var(--global-text-color-light);
+.work-main { flex: 1; min-width: 0; }
+.work-org { font-weight: 700; font-size: 1em; line-height: 1.35; color: var(--global-text-color); }
+.work-role { font-size: 0.85em; margin-top: 2px; color: var(--global-text-color-light); }
+.work-date {
+  flex-shrink: 0;
+  font-size: 0.82em;
+  font-weight: 500;
   white-space: nowrap;
-  font-weight: 500;
-  margin-top: 2px;
-}
-.exp-org {
-  font-size: 0.85em;
-  margin-top: 5px;
   color: var(--global-text-color-light);
+}
+@media (max-width: 480px) {
+  .work-row { flex-wrap: wrap; gap: 4px 12px; }
+  .work-date { width: 100%; padding-left: 96px; }
+}
+.row-list { margin-top: 6px; }
+.row-item {
   display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
+  gap: 16px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--global-border-color);
 }
-.exp-authors {
+.row-item:last-child { border-bottom: none; }
+.row-label {
+  flex-shrink: 0;
+  width: 112px;
   font-size: 0.8em;
-  margin-top: 6px;
-  color: var(--global-text-color-light);
-  line-height: 1.5;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--global-link-color);
 }
-.exp-bullets {
-  margin: 8px 0 0 0;
-  padding-left: 18px;
-  font-size: 0.85em;
-  color: var(--global-text-color);
-  line-height: 1.55;
+.row-main { flex: 1; min-width: 0; }
+.row-title { font-weight: 600; font-size: 0.95em; line-height: 1.4; }
+.row-title a { color: var(--global-text-color); text-decoration: none; }
+.row-title a:hover { color: var(--global-link-color); text-decoration: underline; }
+.row-sub { font-size: 0.82em; margin-top: 3px; line-height: 1.5; color: var(--global-text-color-light); }
+.row-sub strong { color: var(--global-text-color); }
+@media (max-width: 480px) {
+  .row-item { flex-direction: column; gap: 2px; }
+  .row-label { width: auto; }
 }
-.exp-bullets li { margin-bottom: 3px; }
-.self-author { font-weight: 700; text-decoration: underline; color: var(--global-text-color); }
-.paper-tag {
-  display: inline-block;
-  font-size: 0.75em;
-  padding: 1px 8px;
-  border-radius: 20px;
-  border: 1px solid var(--global-link-color);
-  color: var(--global-link-color) !important;
-  text-decoration: none !important;
-  font-weight: 500;
-  transition: background 0.15s, color 0.15s;
-}
-.paper-tag:hover { background: var(--global-link-color); color: #fff !important; }
 .view-all {
   margin-top: 12px;
   font-size: 0.85em;
