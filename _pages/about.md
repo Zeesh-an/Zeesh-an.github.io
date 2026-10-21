@@ -10,13 +10,17 @@ redirect_from:
 Hi there! I am a third-year Ph.D. student in the Department of Computer Science at Emory University, advised by [Dr. Liang Zhao](https://cs.emory.edu/~lzhao41/). My research interests span foundation models, machine learning for optimization and decision-making, and graph learning for complex systems. I obtained my B.E. in Software Engineering from the National University of Sciences and Technology (NUST), Pakistan, in 2024, where I worked under [Dr. Faisal Shafait](https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en).
 
 <div class="open-to">
-  <div class="open-to-label">Open to opportunities</div>
-  I am open to <strong>research and applied scientist internships</strong>, as well as <strong>research collaborations</strong>. If my work aligns with yours, I would be glad to collaborate or discuss ideas. Feel free to reach out by <a href="mailto:{{ site.author.email }}">email</a>.
+  <div class="open-to-label">Seeking Spring/Summer 2027 internships</div>
+  I am currently seeking <strong>research and applied scientist internships for Spring/Summer 2027</strong>, and I am always open to <strong>research collaborations</strong>. If my work aligns with yours, I would be glad to collaborate or discuss ideas. Feel free to reach out by <a href="mailto:{{ site.author.email }}">email</a>!
 </div>
 
 ## News
 
 <div class="news-scroll">
+  <div class="news-item">
+    <span class="news-date">Oct 2026</span>
+    <span class="news-text">Received the NeurIPS 2026 Financial Assistance Award!</span>
+  </div>
   <div class="news-item">
     <span class="news-date">Sep 2026</span>
     <span class="news-text">CONSTRAINER accepted to NeurIPS 2026!</span>
