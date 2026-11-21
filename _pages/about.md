@@ -30,7 +30,7 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
 
 ## Research Interests
 
-<p class="research-lead">I study how agents <strong>learn to self-improve their decisions</strong> in complex scientific domains where feedback is slow and expensive, and build the <strong>foundation models</strong> that power them.</p>
+<p class="research-lead">I study how agents <strong>learn to self-improve</strong> in complex scientific domains where feedback is slow and expensive, and build the <strong>foundation models</strong> that power them.</p>
 
 <div class="rcards">
 {% for topic in site.data.research %}
