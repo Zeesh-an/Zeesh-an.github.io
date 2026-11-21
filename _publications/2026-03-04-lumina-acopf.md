@@ -3,6 +3,7 @@ title: "LUMINA: Foundation Models for Topology Transferable ACOPF"
 collection: publications
 featured: true
 category: conferences
+topics: [optimization]
 date: 2026-03-04
 venue: "ICLR Workshop on Foundation Models for Science"
 badge: "ICLR 2026 Workshop"

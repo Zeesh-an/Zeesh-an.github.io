@@ -26,7 +26,22 @@ redirect_from:
   })();
 </script>
 
-Hi there! I am a third-year Ph.D. student in the Department of Computer Science at Emory University, advised by [Dr. Liang Zhao](https://cs.emory.edu/~lzhao41/). My research interests span foundation models, machine learning for optimization and decision-making, and graph learning for complex systems. I obtained my B.E. in Software Engineering from the National University of Sciences and Technology (NUST), Pakistan, in 2024, where I worked under [Dr. Faisal Shafait](https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en).
+Hi there! I am a third-year Ph.D. student in the Department of Computer Science at Emory University, advised by [Dr. Liang Zhao](https://cs.emory.edu/~lzhao41/). I obtained my B.E. in Software Engineering from the National University of Sciences and Technology (NUST), Pakistan, in 2024, where I worked under [Dr. Faisal Shafait](https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en).
+
+## Research Interests
+
+<p class="research-lead">I study how agents <strong>learn to improve their decisions</strong> in complex scientific domains where feedback is slow and expensive.</p>
+
+<div class="rcards">
+{% for topic in site.data.research %}
+  <a class="rcard" href="{{ base_path }}/publications/?topic={{ topic.id }}">
+    <span class="rcard-icon"><i class="fas {{ topic.icon }}" aria-hidden="true"></i></span>
+    <span class="rcard-title">{{ topic.title }}</span>
+    <span class="rcard-text">{{ topic.summary }}</span>
+    <span class="rcard-go" aria-hidden="true">&rarr;</span>
+  </a>
+{% endfor %}
+</div>
 
 <div class="open-to">
   <div class="open-to-label">Seeking Spring/Summer 2027 internships</div>
@@ -93,7 +108,7 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
   </div>
   <div class="news-item">
     <span class="news-date">Sep 2026</span>
-    <span class="news-text">CONSTRAINER accepted to NeurIPS 2026!</span>
+    <span class="news-text"><a href="https://arxiv.org/abs/2611.10627">CONSTRAINER</a> accepted to NeurIPS 2026!</span>
   </div>
   <div class="news-item">
     <span class="news-date">Sep 2026</span>
@@ -182,6 +197,74 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
 <p class="last-updated">Last updated: {{ site.time | date: "%B %Y" }}</p>
 
 <style>
+.research-lead {
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 0.4em !important;
+}
+.rcards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 10px 0 20px;
+}
+.page__content a.rcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 30px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.page__content a.rcard:hover,
+.page__content a.rcard:focus-visible {
+  border-color: var(--global-link-color);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+.rcard-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: rgba(127, 127, 127, 0.1);
+  background: color-mix(in srgb, var(--global-link-color) 12%, transparent);
+  color: var(--global-link-color);
+  font-size: 16px;
+}
+.rcard-title {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 0.98em;
+  line-height: 1.3;
+}
+.rcard-text {
+  margin-top: 6px;
+  font-size: 0.86em;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+}
+.rcard-go {
+  position: absolute;
+  right: 14px;
+  bottom: 8px;
+  font-family: "Inter", -apple-system, sans-serif;
+  color: var(--global-link-color);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.rcard:hover .rcard-go,
+.rcard:focus-visible .rcard-go { opacity: 1; }
+@media (max-width: 700px) {
+  .rcards { grid-template-columns: 1fr; }
+}
 .pronounce-btn {
   display: inline-flex;
   align-items: center;

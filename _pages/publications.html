@@ -15,8 +15,21 @@ author_profile: true
   Each card shows a thumbnail when the publication sets `thumbnail` (path under /images/),
   otherwise a tile with its short venue `badge`.
 {% endcomment %}
+<div class="pub-filters" role="group" aria-label="Filter by research direction">
+  <button type="button" class="pub-filter active" data-topic="">All <span class="pub-count">{{ site.publications.size }}</span></button>
+  {% for topic in site.data.research %}
+  {% assign n = site.publications | where_exp: "p", "p.topics contains topic.id" | size %}
+  <button type="button" class="pub-filter" data-topic="{{ topic.id }}">{{ topic.title }} <span class="pub-count">{{ n }}</span></button>
+  {% endfor %}
+</div>
+
+<p class="pub-status" hidden>
+  Showing <strong class="pub-status-count"></strong> of {{ site.publications.size }} papers in <strong class="pub-status-topic"></strong>.
+  <a href="#" class="pub-status-all">Show all papers</a>
+</p>
+
 {% for post in site.publications reversed %}
-<div class="pub-entry">
+<div class="pub-entry" data-topics="{{ post.topics | join: ' ' }}">
   <div class="pub-thumbnail{% if post.thumbnail %} pub-thumbnail-img{% endif %}">
     {% if post.thumbnail %}
       {% if post.paperurl %}<a href="{{ post.paperurl }}">{% endif %}<img src="{{ base_path }}/images/{{ post.thumbnail }}" alt="{{ post.title }}" />{% if post.paperurl %}</a>{% endif %}
@@ -28,12 +41,104 @@ author_profile: true
     <h3 class="pub-title">{% if post.paperurl %}<a href="{{ post.paperurl }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</h3>
     <p class="pub-conference">{{ post.venue }}{% unless post.venue contains "20" %}, {{ post.date | date: "%Y" }}{% endunless %}</p>
     {% if post.authors %}<p class="pub-authors">{{ post.authors | replace: "Zeeshan Memon", "<strong>Zeeshan Memon</strong>" }}</p>{% endif %}
+    {% if post.authors contains "*" %}<p class="pub-equal">* Equal contribution</p>{% endif %}
     {% if post.excerpt %}<p class="pub-details">{{ post.excerpt | strip_html | strip }}</p>{% endif %}
   </div>
 </div>
 {% endfor %}
 
+<p class="pub-none" hidden>No papers in this direction yet.</p>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll(".pub-filter");
+    var entries = document.querySelectorAll(".pub-entry");
+    var none = document.querySelector(".pub-none");
+    var status = document.querySelector(".pub-status");
+
+    function apply(topic) {
+      var shown = 0;
+      entries.forEach(function (el) {
+        var match = !topic || (" " + el.dataset.topics + " ").indexOf(" " + topic + " ") !== -1;
+        el.hidden = !match;
+        if (match) shown++;
+      });
+      var label = "";
+      buttons.forEach(function (b) {
+        var on = b.dataset.topic === topic;
+        b.classList.toggle("active", on);
+        if (on && topic) label = b.firstChild.textContent.trim();
+      });
+      none.hidden = shown > 0;
+      status.hidden = !topic;
+      status.querySelector(".pub-status-count").textContent = shown;
+      status.querySelector(".pub-status-topic").textContent = label;
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { select(b.dataset.topic); });
+    });
+
+    function select(topic) {
+      var url = new URL(window.location);
+      if (topic) url.searchParams.set("topic", topic); else url.searchParams.delete("topic");
+      history.replaceState(null, "", url);
+      apply(topic);
+    }
+
+    status.querySelector(".pub-status-all").addEventListener("click", function (e) {
+      e.preventDefault();
+      select("");
+    });
+
+    apply(new URLSearchParams(window.location.search).get("topic") || "");
+  })();
+</script>
+
 <style>
+.pub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 1em 0 0.25em;
+}
+.pub-filter {
+  padding: 4px 12px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 20px;
+  background: var(--global-bg-color);
+  color: var(--global-text-color-light);
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.78em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.pub-filter:hover { border-color: var(--global-link-color); color: var(--global-link-color); }
+.pub-filter.active {
+  background: var(--global-link-color);
+  border-color: var(--global-link-color);
+  color: #fff;
+}
+.pub-count {
+  margin-left: 4px;
+  font-weight: 500;
+  opacity: 0.65;
+}
+.pub-status {
+  margin: 0.9em 0 0;
+  padding: 8px 12px;
+  border-left: 3px solid var(--global-link-color);
+  border-radius: 4px;
+  background: rgba(127, 127, 127, 0.07);
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.82em;
+}
+.pub-status[hidden] { display: none; }
+.pub-status-all { margin-left: 6px; font-weight: 600; }
+.pub-entry[hidden] { display: none; }
+.pub-content .pub-equal { margin-top: 0; font-size: 0.75em; color: var(--global-text-color-light); }
+.pub-none { color: var(--global-text-color-light); font-style: italic; }
 .pub-entry {
   display: flex;
   gap: 1.25em;

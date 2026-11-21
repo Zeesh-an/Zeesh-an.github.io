@@ -1,0 +1,14 @@
+# Research directions shown as cards on the home page and used to filter the Publications page.
+# Tag a paper with `topics: [<id>, ...]` in its _publications/ front matter.
+- id: agents
+  title: "Self-Evolving Agents"
+  icon: "fa-robot"
+  summary: "What enables LLM, coding, and RL agents to perform reliably and self-improve from experience?"
+- id: world-models
+  title: "World Models for Science"
+  icon: "fa-earth-americas"
+  summary: "How can world models of complex scientific domains let agents plan and test (dream) decisions before acting in the real world?"
+- id: optimization
+  title: "Foundation Models for Optimization"
+  icon: "fa-diagram-project"
+  summary: "What will enable us to build a foundation model for optimization?"

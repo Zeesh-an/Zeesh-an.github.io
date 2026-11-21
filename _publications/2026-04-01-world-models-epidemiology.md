@@ -2,6 +2,7 @@
 title: "Toward World Models for Epidemiology"
 collection: publications
 category: conferences
+topics: [world-models]
 date: 2026-04-01
 venue: "ICLR 2026 Workshop on World Models: Understanding, Modelling and Scaling"
 badge: "ICLR 2026 Workshop"

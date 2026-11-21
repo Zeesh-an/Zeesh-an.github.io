@@ -3,6 +3,7 @@ title: "Towards Systematic Generalization for Power Grid Optimization Problems"
 collection: publications
 featured: true
 category: conferences
+topics: [optimization]
 date: 2026-05-03
 venue: "KDD 2026 (Oral)"
 badge: "KDD 2026 Oral"
