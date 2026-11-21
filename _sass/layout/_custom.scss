@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Site-wide overrides (loaded last)
+   ========================================================================== */
+
+/* Headings: tight, heavy sans */
+.page__content h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Prose links: link colour with a soft underline */
+.page__content p a,
+.page__content li a,
+.news-text a,
+.open-to a {
+  color: var(--global-link-color);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(127, 127, 127, 0.45);
+  text-decoration-color: color-mix(in srgb, var(--global-link-color) 35%, transparent);
+
+  &:hover { text-decoration-color: currentColor; }
+}
+
+/* Small labels, dates and titles in lists use the sans face */
+.news-date,
+.work-org,
+.work-date,
+.open-to-label,
+.pub-title,
+.pub-badge {
+  font-family: $sans-serif;
+}
+
+/* Phones: show the profile links instead of a "Follow" dropdown */
+@include breakpoint(max-width $large - 1px) {
+  /* the theme's nav script pads the sidebar whenever the Follow button is hidden */
+  .sidebar { padding-top: 0 !important; }
+
+  .author__urls-wrapper {
+    display: table-caption;
+    caption-side: bottom;
+    padding-top: 10px;
+
+    button { display: none; }
+  }
+
+  .author__urls {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 2px 16px;
+    position: static;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    z-index: auto;
+
+    &:before,
+    &:after { display: none; }
+
+    li, a { margin-bottom: 0; }
+    a { padding: 2px 0; }
+  }
+}
+
+/* Profile photo: rounded square instead of a circle */
+.author__avatar img {
+  border-radius: 8px;
+
+  @include breakpoint($large) {
+    max-width: 200px;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  }
+}

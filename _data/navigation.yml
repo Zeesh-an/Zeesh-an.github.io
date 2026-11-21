@@ -10,10 +10,8 @@
 main:
   - title: "Publications"
     url: /publications/
-  - title: "Achievements"
-    url: /#achievements
-  - title: "Services"
-    url: /#services
+  - title: "Blog"
+    url: /blog/
   - title: "CV"
     url: https://drive.google.com/file/d/1994CnrdIggGDh2b56APnrHcp7_2wRMZU/view
 

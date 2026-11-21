@@ -7,6 +7,25 @@ redirect_from:
   - /about.html
 ---
 
+<button type="button" class="pronounce-btn" id="pronounce-btn" aria-label="Hear how to pronounce my name" title="Hear how to pronounce my name">
+  <i class="fas fa-volume-high" aria-hidden="true"></i>
+</button>
+<audio id="pronounce-audio" src="{{ base_path }}/files/audio/name-pronunciation.m4a" preload="none"></audio>
+<script>
+  (function () {
+    var btn = document.getElementById("pronounce-btn");
+    var audio = document.getElementById("pronounce-audio");
+    var title = document.querySelector(".page__title");
+    if (title) title.appendChild(btn);
+    btn.addEventListener("click", function () {
+      audio.currentTime = 0;
+      audio.play();
+    });
+    audio.addEventListener("play", function () { btn.classList.add("playing"); });
+    audio.addEventListener("ended", function () { btn.classList.remove("playing"); });
+  })();
+</script>
+
 Hi there! I am a third-year Ph.D. student in the Department of Computer Science at Emory University, advised by [Dr. Liang Zhao](https://cs.emory.edu/~lzhao41/). My research interests span foundation models, machine learning for optimization and decision-making, and graph learning for complex systems. I obtained my B.E. in Software Engineering from the National University of Sciences and Technology (NUST), Pakistan, in 2024, where I worked under [Dr. Faisal Shafait](https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en).
 
 <div class="open-to">
@@ -14,9 +33,60 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
   I am currently seeking <strong>research and applied scientist internships for Spring/Summer 2027</strong>, and I am always open to <strong>research collaborations</strong>. If my work aligns with yours, I would be glad to collaborate or discuss ideas. Feel free to reach out by <a href="mailto:{{ site.author.email }}">email</a>!
 </div>
 
+## Experience
+
+<div class="work-list">
+
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/microsoft.png" alt="Microsoft" />
+    <div class="work-main">
+      <div class="work-org">Microsoft Research</div>
+      <div class="work-role">Research Intern · Redmond, WA, USA</div>
+    </div>
+    <div class="work-date">May 2026 – Aug 2026</div>
+  </div>
+
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/argonne.png" alt="Argonne" />
+    <div class="work-main">
+      <div class="work-org">Argonne National Laboratory</div>
+      <div class="work-role">Visiting Student</div>
+    </div>
+    <div class="work-date">Oct 2025 – May 2026</div>
+  </div>
+
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/emory.png" alt="Emory University" />
+    <div class="work-main">
+      <div class="work-org">MICS Lab, Emory University</div>
+      <div class="work-role">Graduate Research Assistant</div>
+    </div>
+    <div class="work-date">Aug 2024 – Present</div>
+  </div>
+
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/cern.png" alt="CERN" />
+    <div class="work-main">
+      <div class="work-org">CERN</div>
+      <div class="work-role">ML Research Intern</div>
+    </div>
+    <div class="work-date">Jun – Aug 2023</div>
+  </div>
+
+  <div class="work-row">
+    <img class="work-logo" src="{{ base_path }}/images/logos/rheinmain.png" alt="RheinMain" />
+    <div class="work-main">
+      <div class="work-org">RheinMain University of Applied Sciences</div>
+      <div class="work-role">ML Research Intern</div>
+    </div>
+    <div class="work-date">Jun – Sep 2022</div>
+  </div>
+
+</div>
+
 ## News
 
-<div class="news-scroll">
+<div class="news-list" id="news-list">
   <div class="news-item">
     <span class="news-date">Oct 2026</span>
     <span class="news-text">Received the NeurIPS 2026 Financial Assistance Award!</span>
@@ -78,81 +148,18 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
     <span class="news-text">Selected for DAAD-funded research internship at RheinMain University of Applied Sciences.</span>
   </div>
 </div>
-
-## Experience
-
-<div class="work-list">
-
-  <div class="work-row">
-    <img class="work-logo" src="{{ base_path }}/images/logos/microsoft.png" alt="Microsoft" />
-    <div class="work-main">
-      <div class="work-org">Microsoft Research</div>
-      <div class="work-role">Research Intern · Redmond, WA, USA</div>
-    </div>
-    <div class="work-date">May 2026 – Aug 2026</div>
-  </div>
-
-  <div class="work-row">
-    <img class="work-logo" src="{{ base_path }}/images/logos/argonne.png" alt="Argonne" />
-    <div class="work-main">
-      <div class="work-org">Argonne National Laboratory</div>
-      <div class="work-role">Visiting Student</div>
-    </div>
-    <div class="work-date">Oct 2025 – May 2026</div>
-  </div>
-
-  <div class="work-row">
-    <img class="work-logo" src="{{ base_path }}/images/logos/emory.png" alt="Emory University" />
-    <div class="work-main">
-      <div class="work-org">MICS Lab, Emory University</div>
-      <div class="work-role">Graduate Research Assistant</div>
-    </div>
-    <div class="work-date">Aug 2024 – Present</div>
-  </div>
-
-  <div class="work-row">
-    <img class="work-logo" src="{{ base_path }}/images/logos/cern.png" alt="CERN" />
-    <div class="work-main">
-      <div class="work-org">CERN</div>
-      <div class="work-role">ML Research Intern</div>
-    </div>
-    <div class="work-date">Jun – Aug 2023</div>
-  </div>
-
-  <div class="work-row">
-    <img class="work-logo" src="{{ base_path }}/images/logos/rheinmain.png" alt="RheinMain" />
-    <div class="work-main">
-      <div class="work-org">RheinMain University of Applied Sciences</div>
-      <div class="work-role">ML Research Intern</div>
-    </div>
-    <div class="work-date">Jun – Sep 2022</div>
-  </div>
-
-</div>
-
-## Selected Publications
-
-{% include base_path %}
-<div class="row-list">
-{% for post in site.publications reversed %}{% if post.featured %}
-  <div class="row-item">
-    <div class="row-label">{{ post.badge | default: post.venue }}</div>
-    <div class="row-main">
-      <div class="row-title">{% if post.paperurl %}<a href="{{ post.paperurl }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</div>
-      {% if post.authors %}<div class="row-sub">{{ post.authors | replace: "Zeeshan Memon", "<strong>Zeeshan Memon</strong>" }}</div>{% endif %}
-    </div>
-  </div>
-{% endif %}{% endfor %}
-</div>
-
-<p class="view-all"><a href="{{ base_path }}/publications/">View all publications &rarr;</a></p>
-
-## Teaching
-
-- Teaching Assistant, CS 584: Spatial Computing, Emory University
-- Teaching Assistant, CS 584: Deep Learning on Graphs, Emory University
-- Teaching Assistant, CS 110: Computer Science Fundamentals, Emory University
-- Teaching Assistant, CS 250: Data Structures and Algorithms, SEECS, National University of Sciences and Technology
+<script>
+  (function () {
+    var list = document.getElementById("news-list");
+    if (!list) return;
+    var update = function () {
+      var atEnd = list.scrollTop + list.clientHeight >= list.scrollHeight - 4;
+      list.classList.toggle("at-end", atEnd);
+    };
+    list.addEventListener("scroll", update);
+    update();
+  })();
+</script>
 
 ## Achievements
 
@@ -164,23 +171,46 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
 - Awarded DAAD fully funded research internship
 - Got NUST Merit Based Scholarship for 8 consecutive semesters
 
+## Teaching & Service
 
-## Services
-
-**Conference Reviewer/Program Committee**
-- PC Member, IEEE International Conference on Data Science and Advanced Analytics 2025
-- PC Member, LLMs4Science @ AAAI 2025
-- Reviewer, NeurIPS 2026
-- Reviewer, KDD 2026
-
-
-**Journal Reviewer**
-- Reviewer, IEEE Transactions on Big Data
-- Reviewer, IEEE Transactions on Computational Social Systems
+<div class="dense">
+<p><strong>Teaching Assistant:</strong> CS 584 Spatial Computing, CS 584 Deep Learning on Graphs, CS 110 Computer Science Fundamentals (Emory University); CS 250 Data Structures and Algorithms (NUST)</p>
+<p><strong>Reviewer:</strong> NeurIPS 2026, KDD 2026, IEEE Transactions on Big Data, IEEE Transactions on Computational Social Systems</p>
+<p><strong>Program Committee:</strong> IEEE DSAA 2025, LLMs4Science @ AAAI 2025</p>
+</div>
 
 <p class="last-updated">Last updated: {{ site.time | date: "%B %Y" }}</p>
 
 <style>
+.pronounce-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+  padding: 0;
+  vertical-align: middle;
+  border: 1px solid var(--global-border-color);
+  border-radius: 50%;
+  background: var(--global-bg-color);
+  color: var(--global-link-color);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.pronounce-btn i { font-size: 15px; }
+.pronounce-btn:hover,
+.pronounce-btn.playing {
+  background: var(--global-link-color);
+  color: #fff;
+}
+.dense p {
+  margin: 0 0 0.35rem;
+  font-size: 0.9em;
+  line-height: 1.55;
+}
 .open-to {
   margin: 16px 0 8px;
   padding: 12px 16px;
@@ -201,7 +231,6 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
   text-transform: uppercase;
   color: var(--global-link-color);
 }
-.open-to a { font-weight: 600; }
 .last-updated {
   margin-top: 28px;
   text-align: right;
@@ -209,16 +238,27 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
   font-style: italic;
   color: var(--global-text-color-light);
 }
-.news-scroll {
-  max-height: 180px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-top: 10px;
+.page__title {
+  font-size: 2.6em;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 0.45em;
 }
-.news-scroll::-webkit-scrollbar { width: 4px; }
-.news-scroll::-webkit-scrollbar-thumb { background: var(--global-border-color); border-radius: 4px; }
+.news-list {
+  margin-top: 10px;
+  max-height: 230px;
+  overflow-y: auto;
+  padding-right: 6px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent);
+          mask-image: linear-gradient(to bottom, #000 80%, transparent);
+}
+.news-list.at-end {
+  -webkit-mask-image: none;
+          mask-image: none;
+}
+.news-list::-webkit-scrollbar { width: 4px; }
+.news-list::-webkit-scrollbar-thumb { background: var(--global-border-color); border-radius: 4px; }
 .news-item {
   display: flex;
   gap: 14px;
@@ -267,42 +307,4 @@ Hi there! I am a third-year Ph.D. student in the Department of Computer Science 
   .work-row { flex-wrap: wrap; gap: 4px 12px; }
   .work-date { width: 100%; padding-left: 96px; }
 }
-.row-list { margin-top: 6px; }
-.row-item {
-  display: flex;
-  gap: 16px;
-  align-items: baseline;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--global-border-color);
-}
-.row-item:last-child { border-bottom: none; }
-.row-label {
-  flex-shrink: 0;
-  width: 112px;
-  font-size: 0.8em;
-  font-weight: 700;
-  line-height: 1.35;
-  color: var(--global-link-color);
-}
-.row-main { flex: 1; min-width: 0; }
-.row-title { font-weight: 600; font-size: 0.95em; line-height: 1.4; }
-.row-title a { color: var(--global-text-color); text-decoration: none; }
-.row-title a:hover { color: var(--global-link-color); text-decoration: underline; }
-.row-sub { font-size: 0.82em; margin-top: 3px; line-height: 1.5; color: var(--global-text-color-light); }
-.row-sub strong { color: var(--global-text-color); }
-@media (max-width: 480px) {
-  .row-item { flex-direction: column; gap: 2px; }
-  .row-label { width: auto; }
-}
-.view-all {
-  margin-top: 12px;
-  font-size: 0.85em;
-  text-align: right;
-}
-.view-all a {
-  color: var(--global-link-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-.view-all a:hover { text-decoration: underline; }
 </style>
